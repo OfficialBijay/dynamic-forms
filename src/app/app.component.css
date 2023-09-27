@@ -1,0 +1,6 @@
+.root-container{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 100%;
+}

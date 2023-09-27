@@ -1,0 +1,61 @@
+nav{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.brand-logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo .text{
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.nav-links{
+    width: 80%;
+    height: 100%;
+    padding: 0 10%;
+}
+
+ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    position: relative;
+    width: calc(100% / 6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: font-size 0.1s ease;
+}
+
+li.active{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+li.active::before{
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 10px;
+    background-color: rgb(220, 208, 225);
+}

@@ -1,0 +1,306 @@
+<div class="form-container">
+  <div class="form-elements">
+    <div class="container">
+      <div class="card">
+        <h1>Elements</h1>
+        <div class="elements-list">
+          <ul>
+            <li>
+              <div class="top" (click)="selectElement('heading')">
+                <span>Text Heading</span>
+                <span class="material-symbols-outlined">title</span>
+              </div>
+              <div class="bottom" *ngIf="showHeadingTextEditor">
+                <input type="text" placeholder="Enter Heading Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('heading')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)">check_circle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top" (click)="selectElement('label')">
+                <span>Text Label</span>
+                <span class="material-symbols-outlined">text_fields</span>
+              </div>
+              <div class="bottom" *ngIf="showLabelTextEditor">
+                <input type="text" placeholder="Enter Label Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('label')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)">check_circle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top" (click)="selectElement('text-input')">
+                <span>Text Input</span>
+                <span class="material-symbols-outlined">sort_by_alpha</span>
+              </div>
+              <div class="bottom" *ngIf="showTextInputTextEditor">
+                <input type="text" placeholder="Enter Placeholder Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('text-input')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)">check_circle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top" (click)="selectElement('email-input')">
+                <span>Email Input</span>
+                <span class="material-symbols-outlined">alternate_email</span>
+              </div>
+              <div class="bottom" *ngIf="showEmailInputTextEditor">
+                <input type="text" placeholder="Enter Placeholder Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('email-input')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)">check_circle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top" (click)="selectElement('number-input')">
+                <span>Number Input</span>
+                <span class="material-symbols-outlined">pin</span>
+              </div>
+              <div class="bottom" *ngIf="showNumberInputTextEditor">
+                <input type="text" placeholder="Enter Placeholder Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('number-input')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)" title="save">check_circle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top" (click)="selectElement('pwd-input')">
+                <span>Password Input</span>
+                <span class="material-symbols-outlined">password</span>
+              </div>
+              <div class="bottom" *ngIf="showPwdInputTextEditor">
+                <input type="text" placeholder="Enter Placeholder Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('pwd-input')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)" title="save">check_circle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top" (click)="selectElement('radio-btn')">
+                <span>Radio Button</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+              </div>
+              <div class="bottom" *ngIf="showRadioButtonTextEditor">
+                <input type="text" placeholder="Enter Placeholder Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('radio-btn')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)" title="save">check_circle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top" (click)="selectElement('check-box')">
+                <span>Check Box</span>
+                <span class="material-symbols-outlined">check_box</span>
+              </div>
+              <div class="bottom" *ngIf="showCheckBoxTextEditor">
+                <input type="text" placeholder="Enter Placeholder Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('check-box')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)" title="save">check_circle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top" (click)="selectElement('drop-down')">
+                <span>Drop Down</span>
+                <span class="material-symbols-outlined">arrow_drop_down_circle</span>
+              </div>
+              <div class="bottom" *ngIf="showDropDownOptionTextEditor">
+                <input type="text" placeholder="Enter Placeholder Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('drop-down')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)" title="save">check_circle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top" (click)="selectElement('submit-btn')">
+                <span>Submit Button</span>
+                <span class="material-symbols-outlined">crop_16_9</span>
+              </div>
+              <div class="bottom" *ngIf="showSubmitButtonTextEditor">
+                <input type="text" placeholder="Enter Placeholder Text" [(ngModel)]="textVariable">
+                <div class="action">
+                  <span class="material-symbols-outlined" (click)="closeIndividualCustomTextEditor('submit-btn')" title="close">cancel</span>
+                  <span class="material-symbols-outlined" (click)="changeTextContentInArray($event)" title="save">check_circle</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-area">
+    <div class="container">
+      <div class="card">
+        <div class="top">
+          <button (click)="resetForm()">Reset</button>
+          <h1>Build Your Form</h1>
+          <button (click)="generateFormCode()">Generate</button>
+        </div>
+        <div class="form">
+          <div class="card">
+            <div class="form-preview">
+              <form>
+                <!-- <div class="heading">
+                  <input type="text" placeholder="Text Input" />
+                  <div class="action">
+                    <span class="material-symbols-outlined" title="remove" (click)="removeElement(0,'input-text')">
+                      cancel
+                    </span>
+                    <span class="material-symbols-outlined" title="edit">
+                      edit
+                    </span> 
+                  </div>
+                </div> -->
+                <ng-container *ngFor="let element of formElements; let i = index" >
+                  <ng-container [ngSwitch]="element.elementType">
+                    <div class="heading" *ngSwitchCase="'heading'">
+                      <h1 contenteditable="true">{{element.content}}</h1>
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span>
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'label'">
+                      <label>{{ element.content }}</label>
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span> 
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'text-input'">
+                      <input type="text" [placeholder]="element.content" />
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span> 
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'email-input'">
+                      <input type="email" [placeholder]="element.content" />
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span> 
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'number-input'">
+                      <input type="number" [placeholder]="element.content" />
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span> 
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'pwd-input'">
+                      <input type="password" [placeholder]="element.content" />
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span> 
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'radio-btn'" class="radio">
+                      <label for="radio">
+                        <span>{{element.content}}</span>
+                        <input type="radio" id="radio" [value]="element.content" />
+                      </label>
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span> 
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'check-box'" class="check-box">
+                      <label for="check-box">
+                        <span>{{element.content}}</span>
+                        <input type="checkbox" id="check-box" [value]="element.content" />
+                      </label>
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span> 
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'drop-down'" class="drop-down">
+                      <select name="drop-down" id="drop-down">
+                        <option [value]="element.content">{{element.content}}</option>
+                      </select>
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span> 
+                      </div>
+                    </div>
+                    <div class="submit-btn" *ngSwitchCase="'submit-btn'">
+                      <input type="submit" [value]="element.content" />
+                      <div class="action">
+                        <span class="material-symbols-outlined" title="remove" (click)="removeElement(i, element.elementType)">
+                          cancel
+                        </span>
+                        <span class="material-symbols-outlined" title="edit" (click)="changeTextContent(i, element.elementType)">
+                          edit
+                        </span> 
+                      </div>
+                    </div>
+                    <!-- Add more cases for other form elements -->
+                  </ng-container>
+                </ng-container>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="generated-code-area" *ngIf="generatedHTML.length > 0">
+      <div class="generated-code">
+        <pre>{{generatedHTML}}</pre>
+      </div>
+      <div class="action">
+        <span (click)="resetGeneratedHtml()">close</span>
+        <span (click)="copyHtmlCodeToClipboard()">copy</span>
+      </div>
+    </div>
+  </div>
+</div>

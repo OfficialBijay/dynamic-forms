@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: linear-gradient(45deg, rgb(211, 56, 211), rgb(54, 171, 180), rgb(50, 50, 191));
+}
+
+li{
+    list-style: none;
+    user-select: none;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.card{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 1.5rem;
+    background-color: rgba(184, 183, 183, 0.375);
+    box-shadow: 0px 0px 4px #efefef, 0px 0px 4px #efefef;
+    overflow: hidden;
+}
