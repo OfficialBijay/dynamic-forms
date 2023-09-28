@@ -66,3 +66,24 @@
 img{
     height: 90%;
 }
+
+@media screen and (max-width:765px) {
+    .container{
+        flex-direction: column;
+    }
+
+    img{
+        height: 30%;
+    }
+
+    .text-container{
+        width: 100%;
+    }
+
+    .text-container span:nth-child(1){
+        font-size: 2.5rem;
+    }
+    .text-container span:nth-child(2){
+        font-size: 1.4rem;
+    }
+}

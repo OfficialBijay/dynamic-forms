@@ -1,9 +1,13 @@
 <nav>
     <div class="brand-logo">
+        <span class="material-symbols-outlined" id="menu" *ngIf="showMenuIcon" (click)="showMenu()">menu</span>
         <div class="text" [routerLink]="['home']">FormFlex</div>
     </div>
     <div class="nav-links">
         <ul>
+            <li id="close">
+                <span class="material-symbols-outlined" (click)="closeMenu()">close</span>
+            </li>
             <li routerLinkActive="active" [routerLink]="['home']">Home</li>
             <li routerLinkActive="active" [routerLink]="['products']">Products</li>
             <li routerLinkActive="active" [routerLink]="['forms']">Forms</li>
