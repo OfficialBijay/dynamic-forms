@@ -17,6 +17,7 @@
 }
 
 .text-container{
+    position: relative;
     width: 40%;
     height: 100%;
     padding-top: 3rem;
@@ -24,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+  animation: moveText linear 0.6s;
 }
 
 .text-container span{
@@ -64,8 +66,28 @@
 }
 
 img{
+    position: relative;
     height: 90%;
+    animation: moveImage linear 0.6s;
 }
+
+@keyframes moveImage {
+    0% {
+      left: -10rem;
+    }
+    100% {
+      left: 0rem;
+    }
+  }
+@keyframes moveText {
+    0% {
+      right: -9rem;
+    }
+    100% {
+      right: 0rem;
+    }
+  }
+
 
 @media screen and (max-width:765px) {
     .container{
@@ -84,6 +106,6 @@ img{
         font-size: 2.5rem;
     }
     .text-container span:nth-child(2){
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
