@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.details{
+    position: relative;
+    width: 75%;
+    height: 95%;
+    display: flex;
+}
+
+.details .info{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info > div{
+    height: 75%;
+    width: 90%;
+}
+
+.text p{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.text p:nth-child(1){
+    font-size: 0.9rem;
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(192, 209, 209);
+}
+.text p:nth-child(2){
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.text p:nth-child(3){
+    font-family: sans-serif;
+    color: rgb(231, 231, 231);
+    font-size: 1.3rem;
+}
+
+.socials{
+    margin: 2rem 0 1rem;
+    height: 2rem;
+    width: 35%;
+    padding-left: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.socials img{
+    height: 100%;
+    cursor: pointer;
+}
+
+.button{
+    padding-left: 2rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.button button{
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(45deg, rgb(50, 50, 191), rgb(54, 171, 180), rgb(211, 56, 211));
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8),
+                1px 1px 5px rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    user-select: none;
+}
+
+.button button:active{
+    margin-top: 4px;
+}
+
+.details .image{
+    width: 45%;
+    height: 100%;
+    padding-bottom: 5rem;
+}
+
+.image img{
+    position: absolute;
+    scale: 1.2;
+}
+
+@media screen and (max-width:765px) {
+    .details{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .info{
+        width: 100% !important;
+        display: block;
+    }
+
+    .text p:nth-child(2){
+        position: relative;
+        z-index: 7;
+    }
+
+    .image{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .image img{
+        position: absolute;
+        top: -10rem;
+        left: -6rem;
+        scale: 1;
+    }
+}
